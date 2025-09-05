@@ -1,3 +1,11 @@
+/*# ------------------- Global Styles --------------------- */
+/* CSS Reset / Clearing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     align-content: center;
@@ -6,13 +14,13 @@ body {
     background-color: #f4f4f4;
 }
 
-body h1 {
+h1 {
     text-align: center;
     color: #333;
     margin-top: 20px;
 }
 
-body div {
+div {
     display: flex;
     align-items: center;
     max-width: 1000px;
@@ -21,6 +29,16 @@ body div {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 0 auto;
 }
 
 footer {

@@ -28,11 +28,25 @@ body {
     align-items: center;
     justify-content: center;
     padding: 12px 16px;
-    background: #ffffffcc;
+    background: #CC0033;
     /* slight translucency */
     backdrop-filter: blur(6px);
     /* glassy effect */
     border-bottom: 1px solid #e6e6e6;
+}
+
+/* Logo formatting */
+.header img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    padding-right: 25px;
+  }
+
+.header h1 {
+    font-size: 1.25rem;
+    /* ~20px */
+    color: #fff;
 }
 
 /* Center the input on the page */

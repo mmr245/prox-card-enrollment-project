@@ -2,8 +2,6 @@
 
 <head>
     <title>RUID Enrollment Demo</title>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="client.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
@@ -13,16 +11,42 @@
         <h1>RUID Prox Card Enrollment Demo</h1>
     </div>
 
-    <div id="message" class="is-visible"></div> <!-- starts hidden, gives feedback after tap-->
+    <!-- Collects the csv file name -->
+    <section id="step-name" class="card">
+        <h2>1) Name your CSV</h2>
+        <div class="row">
+            <input id="csvName" type="text" placeholder="e.g., ruid-enrollment-2025-09-08" />
+            <button id="createCsvBtn" type="button">Create CSV</button>
+        </div>
+        <div id="nameStatus" class="status"></div>
+    </section>
 
-    <div id="main">
-        <input id="scanInput" type="text" placeholder="Scan your RUID" />
-    </div>
+    <!-- Confirms the csv file was created -->
+    <section id="step-confirm" class="card" style="display:none;">
+        <h2>File created</h2>
+        <p>You’re writing to <strong id="currentCsv" class="mono"></strong></p>
+    </section>
+
+    <!-- Logging taps -->
+    <section id="step-tap" class="card" style="display:none;">
+        <h2>3) Log a tap</h2>
+        <p>Scan or type the card UID below, then press <span class="mono">Enter</span>.</p>
+
+        <div id="main" class="row">
+            <input id="scanInput" type="text" placeholder="Scan your RUID" autocomplete="off" />
+            <button id="saveTapBtn" type="button">Save tap</button>
+        </div>
+
+        <div id="message" class="status"></div>
+        <p class="status"><span id="tapCount">0</span> taps saved this session.</p>
+    </section>
 
     <footer>
         <p>Fall 2025 Prox Card Enrollment for LS Project</p>
         <contact>For More Infomation email at <a href="mailto:aj.rose@rutgers.edu">aj.rose@rutgers.edu</a>></contact>
     </footer>
+    
+    <script src="client.js" defer></script>
 </body>
 
 </html>

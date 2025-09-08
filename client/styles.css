@@ -13,7 +13,8 @@ body {
     background: #f4f4f4;
     color: #222;
     line-height: 1.4;
-    min-height: 100svh
+    align-items: center;
+    min-height: 100svh;
 }
 
 .header {
@@ -40,7 +41,7 @@ body {
     width: auto;
     object-fit: contain;
     padding-right: 25px;
-  }
+}
 
 .header h1 {
     font-size: 1.25rem;
@@ -48,12 +49,51 @@ body {
     color: #fff;
 }
 
+.card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 16px;
+    margin: 16px 0;
+    background: #fff;
+    width: min(720px, 92vw);
+}
+
+.row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.status {
+    margin-top: 8px;
+    color: #444;
+}
+
+.ok {
+    color: #0a7a0a;
+}
+
+.err {
+    color: #b00020;
+}
+
+.mono {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+#csvName,
+#scanInput {
+    flex: 1;
+}
+
 /* Center the input on the page */
 #main {
     flex: 1;
-    display: grid;    /* centers vertically & horizontally */
+    display: grid;
+    /* centers vertically & horizontally */
     padding: 20px;
-    justify-content: center;  /* center horizontally */
+    justify-content: center;
+    /* center horizontally */
     align-items: flex-start;
 }
 
@@ -115,10 +155,12 @@ footer a {
     .header {
         flex-direction: row;
     }
+
     .header h1 {
         font-size: 1.5rem;
         /* ~24px */
     }
+
     #scanInput {
         font-size: 18px;
     }
@@ -130,6 +172,7 @@ footer a {
         font-size: 1.75rem;
         /* ~28px */
     }
+
     #scanInput {
         font-size: 20px;
     }
